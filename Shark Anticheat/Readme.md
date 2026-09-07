@@ -6,6 +6,7 @@ Note: This project uses privileged access, hardware identification, Discord tele
 # 🛡️ Anti-Cheat Detection Features
 
 An overview of the detection mechanisms implemented by this anti-cheat system. Each entry lists the **feature**, the **detection method**, and the **reported result** when a violation is found.
+Avoid the 5th number (cheat memory signatures) in the update. The updated version will provide real detection of cheat memory signatures.
 
 ---
 
