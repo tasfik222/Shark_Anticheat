@@ -38,5 +38,6 @@ Avoid the 5th number (cheat memory signatures) in the update. The updated versio
 This system combines **static checks** (signature verification, module enumeration), **runtime memory analysis** (signature scanning, integrity checksums), **behavioral heuristics** (aim anomaly, time manipulation), and **environment checks** (VM detection, screen-recording tools) to provide layered protection against tampering, injection, and cheating.
 
 ---
+Need any help, [join my discord server](https://discord.gg/CHYhSH3sKB) 
 
 *Last updated: 2026*
