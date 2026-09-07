@@ -201,7 +201,7 @@ void FreezeMonitorLoop()
                     "> AntiCheat is running again after freeze.\n"
                     "> **Scan recommended** — cheat may have been injected during freeze!";
                 std::thread([msg]() {
-                    SendAlert("\xE2\x9A\xA0 ANTICHEAT RESUMED AFTER FREEZE", msg, 0xFFAA00);
+                    SendAlert("\xE2\x9B\xA0 ANTICHEAT RESUMED AFTER FREEZE", msg, 0xFFAA00);
                 }).detach();
             }
             freezeCount = 0;
