@@ -119,7 +119,7 @@ Questions, bugs, or feature requests — join the Discord:
 
 Version 2.0.0 is currently **under active development**. The build pipeline (`.bat` scripts) is in place; the detection engine (`SHARK_AntiCheat.cpp`, `SHARK_Guardian.cpp`) is being rebuilt from the ground up and will be published here as it lands.
 
-Looking for the working release right now? Head to **[v1.0.0](../Shark%20Anticheat)**.
+Looking for the working release right now? Head to **[v1.0.0]([../Shark%20Anticheat](https://github.com/tasfik222/Shark_Anticheat/tree/main/Shark%20Anticheat))**.
 
 ---
 
