@@ -18,7 +18,7 @@ Avoid the 5th number (cheat memory signatures) in the update. The updated versio
 | 2 | **Unsigned/injected modules** | Enumerates loaded modules in the target process | Sends module name and path alerts |
 | 3 | **Suspicious threads** | Checks whether thread start addresses fall outside known module ranges | Flags possible injected or unknown threads |
 | 4 | **Manual-mapped DLLs** | Looks for committed, private executable RWX memory regions with an MZ header | Flags possible hidden/manual-mapped PE images |
-| 5 | **Cheat memory signatures** | Searches target-process memory for hard-coded byte patterns | Detects markers such as `CheatEngine7`, `AimbotEnable`, `ESP_ENABLE`, `InjectedDLL`, and NOP sleds |
+| 5 | **Cheat memory signatures 🚩** | Searches target-process memory for hard-coded byte patterns | Detects markers such as `CheatEngine7`, `AimbotEnable`, `ESP_ENABLE`, `InjectedDLL`, and NOP sleds |
 | 6 | **Debugger attachment** | Uses `CheckRemoteDebuggerPresent` on `HD-Player.exe` | Flags an attached debugger |
 | 7 | **Memory integrity changes** | Stores checksums of main-module memory pages and compares them later | Reports changed memory regions |
 | 8 | **External process handles** | Enumerates system handles and identifies processes holding a handle to `HD-Player.exe` | Flags and attempts to close suspicious handles |
