@@ -1,24 +1,22 @@
-<div align="center">
-
 # 🦈 SHARK AntiCheat
 
 **A Windows-based anti-cheat monitoring toolkit built around `HD-Player.exe`**
 
 [![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)](#)
 [![Language](https://img.shields.io/badge/language-C%2B%2B17-00599C?logo=cplusplus&logoColor=white)](#)
-[![Status](https://img.shields.io/badge/status-active-brightgreen)](#)
+[![Status](https://img.shields.io/badge/status-stable-brightgreen)](#)
 [![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/CHYhSH3sKB)
-
-</div>
 
 ---
 
 ## 📦 Versions
 
-| Version | Status | Description | Link |
-|---|---|---|---|
-| **v1.0.0** | ✅ Stable | Full detection suite — process, memory, module, driver, debugger, and environment checks with Discord webhook reporting | [Open folder →](./Shark%20Anticheat) |
-| **v2.0.0** | 🚧 In development | Next-generation rebuild with `SHARK_Guardian.cpp` companion watchdog and improved build scripts | [Open folder →](./Shark%20Anticheat%20v2) |
+| Version | Codename | Status | Description | Link |
+|---|---|---|---|---|
+| **v1.0.0** | Shark AntiCheat | ✅ Stable | Full detection suite — process, memory, module, driver, debugger, and environment checks with Discord webhook reporting | [Open folder →](https://github.com/tasfik222/Shark_Anticheat/tree/main/Shark%20Anticheat) |
+| **v2.0.0** | 🔴 Red Eye AntiCheat | ✅ Stable | Next-generation rebuild with `SHARK_Guardian.cpp` companion watchdog and improved build scripts | [Open folder →](https://github.com/tasfik222/Shark_Anticheat/tree/main/Red%20Eye%20Anticheat) |
+
+> ℹ️ **Note:** Version 2.0.0 has been rebranded as **Red Eye AntiCheat** and now lives in the `Red Eye Anticheat/` folder (previously referred to as "Shark Anticheat v2" — that name/folder no longer exists and any old links to it are broken).
 
 ---
 
@@ -26,11 +24,11 @@
 
 SHARK AntiCheat is a monitoring tool designed to detect tampering, injection, and cheating attempts against `HD-Player.exe`. It combines static checks, runtime memory analysis, behavioral heuristics, and environment detection, then reports every event live through **Discord webhooks**.
 
-> ⚠️ **Before you compile or distribute:** this project uses privileged access, hardware identification, Discord telemetry, and Guardian executable deployment. Review the security and privacy implications for your use case first.
+> ⚠️ **Before you compile or distribute:** this project uses privileged access, hardware identification, Discord telemetry, and Guardian executable deployment. Review the security and privacy implications for your use case first. **Never hardcode your Discord webhook URL directly in a public source file** — use an environment variable or a local, git-ignored config file instead.
 
 ---
 
-## ✨ Highlights (v1.0.0)
+## ✨ Highlights (v1.0.0 — Shark AntiCheat)
 
 - 🔍 Unsigned executable/module & Authenticode verification
 - 🧩 Injected module and suspicious thread detection
@@ -40,7 +38,15 @@ SHARK AntiCheat is a monitoring tool designed to detect tampering, injection, an
 - 🎯 Aim-anomaly and time-manipulation heuristics
 - 💓 Runtime heartbeat + tamper-resistant watchdog (Guardian)
 
-Full detection matrix is documented in the [v1.0.0 README](./Shark%20Anticheat/Readme.md).
+Full detection matrix is documented in the [v1.0.0 README](https://github.com/tasfik222/Shark_Anticheat/blob/main/Shark%20Anticheat/Readme.md).
+
+---
+
+## 🔴 About Red Eye AntiCheat (v2.0.0)
+
+Red Eye AntiCheat is the ground-up rebuild of the detection engine, now **stable and ready to use**. It builds on the v1.0.0 detection matrix with a rewritten core (`SHARK_AntiCheat.cpp`) and companion watchdog (`SHARK_Guardian.cpp`), plus improved build scripts.
+
+Both **v1.0.0 (Shark AntiCheat)** and **v2.0.0 (Red Eye AntiCheat)** are currently maintained. If you're starting fresh, **Red Eye AntiCheat is the recommended version**.
 
 ---
 
@@ -48,19 +54,30 @@ Full detection matrix is documented in the [v1.0.0 README](./Shark%20Anticheat/R
 
 Both versions are written in C++ and compiled with MinGW (`g++`) on Windows.
 
-```cmd
+```bash
 g++ SHARK_AntiCheat.cpp -o SHARK_AntiCheat.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
 g++ SHARK_Guardian.cpp -o SHARK_Guardian.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
 ```
 
-📘 Full step-by-step build guide (MinGW setup, PATH configuration, troubleshooting): [`how_to_convert_cpp_to_exe.md`](./Shark%20Anticheat/how_to_convert_cpp_to_exe.md)
+📘 Full step-by-step build guide (MinGW setup, PATH configuration, troubleshooting):
+[`how_to_convert_cpp_to_exe.md`](https://github.com/tasfik222/Shark_Anticheat/blob/main/Shark%20Anticheat/how_to_convert_cpp_to_exe.md)
 
 Or just run the included build scripts:
 
-```cmd
+```bash
 build_shark_anticheat.bat
 build_shark_guardian.bat
 ```
+
+**Linked libraries:**
+
+| Library | Purpose |
+|---|---|
+| `ole32` | COM (Component Object Model) support |
+| `oleaut32` | OLE Automation functions |
+| `wininet` | Internet/HTTP request handling |
+| `wintrust` | File signature / Authenticode verification |
+| `wbemuuid` | WMI (Windows Management Instrumentation) queries |
 
 ---
 
@@ -76,7 +93,7 @@ Shark_Anticheat/
 │   ├── how_to_convert_cpp_to_exe.md
 │   └── Readme.md
 │
-└── Shark Anticheat v2/           # v2.0.0 — in development
+└── Red Eye Anticheat/            # v2.0.0 — stable release (formerly "Shark Anticheat v2")
     ├── SHARK_AntiCheat.cpp
     ├── SHARK_Guardian.cpp
     ├── build_shark_anticheat.bat
@@ -93,72 +110,4 @@ Questions, bugs, or feature requests — join the Discord:
 
 ---
 
-<div align="center">
-
 *Last updated: 2026*
-
-</div>
-
-
-
-<div align="center">
-
-# 🦈 SHARK AntiCheat — v2.0.0
-
-**Next-generation rebuild of SHARK AntiCheat**
-
-[![Status](https://img.shields.io/badge/status-in%20development-orange)](#)
-[![Platform](https://img.shields.io/badge/platform-Windows-0078D6?logo=windows&logoColor=white)](#)
-[![Discord](https://img.shields.io/badge/Discord-Join%20Server-5865F2?logo=discord&logoColor=white)](https://discord.gg/CHYhSH3sKB)
-
-</div>
-
----
-
-## 🚧 Status
-
-Version 2.0.0 is currently **under active development**. The build pipeline (`.bat` scripts) is in place; the detection engine (`SHARK_AntiCheat.cpp`, `SHARK_Guardian.cpp`) is being rebuilt from the ground up and will be published here as it lands.
-
-Looking for the working release right now? Head to **[v1.0.0](https://github.com/tasfik222/Shark_Anticheat/tree/main/Shark%20Anticheat)**.
-
----
-
-## 📁 Contents
-
-| File | Purpose |
-|---|---|
-| `SHARK_AntiCheat.cpp` | Core detection engine *(in progress)* |
-| `SHARK_Guardian.cpp` | Watchdog companion process *(in progress)* |
-| `build_shark_anticheat.bat` | Compiles `SHARK_AntiCheat.cpp` with MinGW |
-| `build_shark_guardian.bat` | Compiles `SHARK_Guardian.cpp` with MinGW |
-
----
-
-## 🛠️ Building
-
-Once the source files are populated, compile with:
-
-```cmd
-build_shark_anticheat.bat
-build_shark_guardian.bat
-```
-
-These scripts call `g++` with the required Windows libraries (`psapi`, `wbemuuid`, `wininet`, `shell32`, `advapi32`, `wintrust`, `crypt32`, `ole32`, `oleaut32`, `uuid`, `ws2_32`) using the C++17 standard with `-O2` optimization.
-
-For a full manual build walkthrough, see the [v1.0.0 build guide](../Shark%20Anticheat/how_to_convert_cpp_to_exe.md) — the same MinGW setup applies here.
-
----
-
-## 💬 Follow Progress / Get Support
-
-Join the Discord to follow v2.0.0 development or ask questions:
-
-**[👉 discord.gg/CHYhSH3sKB](https://discord.gg/CHYhSH3sKB)**
-
----
-
-<div align="center">
-
-*Last updated: 2026*
-
-</div>
