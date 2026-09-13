@@ -54,7 +54,7 @@ g++ RedEye_Guardian.cpp -o SHARK_Guardian.exe -lole32 -loleaut32 -lwininet -lwin
 Or run the included build scripts:
 
 ```bash
-build_shark_anticheat.bat
+build_anticheat.bat
 build_shark_guardian.bat
 ```
 
@@ -68,7 +68,7 @@ For a full manual build walkthrough (MinGW setup, PATH configuration, troublesho
 |---|---|
 | `Red_Eye_-_AntiCheat_for_HD-Player.cpp` | Core detection engine |
 | `RedEye_Guardian.cpp` | Watchdog companion process |
-| `build_shark_anticheat.bat` | Compiles `Red_Eye_-_AntiCheat_for_HD-Player.cpp` with MinGW |
+| `build_anticheat.bat` | Compiles `Red_Eye_-_AntiCheat_for_HD-Player.cpp` with MinGW |
 | `build_shark_guardian.bat` | Compiles `RedEye_Guardian.cpp` with MinGW |
 
 ---
