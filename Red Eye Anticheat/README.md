@@ -55,7 +55,7 @@ Or run the included build scripts:
 
 ```bash
 build_anticheat.bat
-build_shark_guardian.bat
+build_guardian.bat
 ```
 
 For a full manual build walkthrough (MinGW setup, PATH configuration, troubleshooting), see the [Shark AntiCheat v1.0.0 build guide](https://github.com/tasfik222/Shark_Anticheat/blob/main/Shark%20Anticheat/how_to_convert_cpp_to_exe.md) — the same MinGW setup applies here.
@@ -69,7 +69,7 @@ For a full manual build walkthrough (MinGW setup, PATH configuration, troublesho
 | `Red_Eye_-_AntiCheat_for_HD-Player.cpp` | Core detection engine |
 | `RedEye_Guardian.cpp` | Watchdog companion process |
 | `build_anticheat.bat` | Compiles `Red_Eye_-_AntiCheat_for_HD-Player.cpp` with MinGW |
-| `build_shark_guardian.bat` | Compiles `RedEye_Guardian.cpp` with MinGW |
+| `build_guardian.bat` | Compiles `RedEye_Guardian.cpp` with MinGW |
 
 ---
 
