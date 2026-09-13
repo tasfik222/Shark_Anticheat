@@ -1,7 +1,7 @@
 🔴 Red Eye AntiCheat — Detection Overview
 ==========================================
 
-`SHARK_AntiCheat.cpp` (Red Eye build) is a Windows monitoring tool designed primarily around `HD-Player.exe`. It is the next-generation rebuild of Shark AntiCheat v1.0.0, performing process, memory, module, driver, debugger, and environment checks, then reporting events through Discord webhook messages, backed by a companion watchdog (`SHARK_Guardian.cpp`).
+`Red_Eye_-_AntiCheat_for_HD-Player.cpp` (Red Eye build) is a Windows monitoring tool designed primarily around `HD-Player.exe`. It is the next-generation rebuild of Shark AntiCheat v1.0.0, performing process, memory, module, driver, debugger, and environment checks, then reporting events through Discord webhook messages, backed by a companion watchdog (`RedEye_Guardian.cpp`).
 
 > **Note:** This project uses privileged access, hardware identification, Discord telemetry, and Guardian executable deployment. Review the security and privacy implications before compiling or distributing it. Never hardcode your Discord webhook URL directly in source — use an environment variable or a local, git-ignored config file instead.
 
@@ -34,7 +34,7 @@ An overview of the detection mechanisms implemented by this anti-cheat system. E
 | 15 | **Thread tampering (Guardian)** | Watchdog checks whether monitoring threads were suspended or terminated | Reports and attempts to resume suspended threads |
 | 16 | **Runtime heartbeat** | Periodically posts running status | Reports that the tool remains active |
 
-> ⚠️ These are the carried-over detections inherited from Shark AntiCheat v1.0.0. If the Red Eye rebuild has added, removed, or changed any detection module, update this table to match the actual `SHARK_AntiCheat.cpp` / `SHARK_Guardian.cpp` source before publishing — this file should always reflect the real code, not the previous version's assumptions.
+> ⚠️ These are the carried-over detections inherited from Shark AntiCheat v1.0.0. If the Red Eye rebuild has added, removed, or changed any detection module, update this table to match the actual `Red_Eye_-_AntiCheat_for_HD-Player.cpp` / `RedEye_Guardian.cpp` source before publishing — this file should always reflect the real code, not the previous version's assumptions.
 
 ---
 
@@ -47,8 +47,8 @@ This system combines **static checks** (signature verification, module enumerati
 ## 🚀 Build Instructions
 
 ```bash
-g++ SHARK_AntiCheat.cpp -o SHARK_AntiCheat.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
-g++ SHARK_Guardian.cpp -o SHARK_Guardian.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
+g++ Red_Eye_-_AntiCheat_for_HD-Player.cpp -o SHARK_AntiCheat.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
+g++ RedEye_Guardian.cpp -o SHARK_Guardian.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
 ```
 
 Or run the included build scripts:
@@ -66,10 +66,10 @@ For a full manual build walkthrough (MinGW setup, PATH configuration, troublesho
 
 | File | Purpose |
 |---|---|
-| `SHARK_AntiCheat.cpp` | Core detection engine |
-| `SHARK_Guardian.cpp` | Watchdog companion process |
-| `build_shark_anticheat.bat` | Compiles `SHARK_AntiCheat.cpp` with MinGW |
-| `build_shark_guardian.bat` | Compiles `SHARK_Guardian.cpp` with MinGW |
+| `Red_Eye_-_AntiCheat_for_HD-Player.cpp` | Core detection engine |
+| `RedEye_Guardian.cpp` | Watchdog companion process |
+| `build_shark_anticheat.bat` | Compiles `Red_Eye_-_AntiCheat_for_HD-Player.cpp` with MinGW |
+| `build_shark_guardian.bat` | Compiles `RedEye_Guardian.cpp` with MinGW |
 
 ---
 
