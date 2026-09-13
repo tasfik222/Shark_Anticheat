@@ -1,7 +1,0 @@
-{
-  "target_process_name": "SHARK-AntiCheat.exe",
-  "poll_interval_ms": 1000,
-  "discord_webhook": "",
-  "log_file_path": "watchdog.log",
-  "alert_on_new_threads": false
-}
