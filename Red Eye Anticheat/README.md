@@ -47,8 +47,8 @@ This system combines **static checks** (signature verification, module enumerati
 ## 🚀 Build Instructions
 
 ```bash
-g++ Red_Eye_-_AntiCheat_for_HD-Player.cpp -o SHARK_AntiCheat.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
-g++ RedEye_Guardian.cpp -o SHARK_Guardian.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
+g++ Red_Eye_-_AntiCheat_for_HD-Player.cpp -o Red Eye - AntiCheat for HD-Player.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
+g++ RedEye_Guardian.cpp -o RedEyeGuardian.exe -lole32 -loleaut32 -lwininet -lwintrust -lwbemuuid
 ```
 
 Or run the included build scripts:
